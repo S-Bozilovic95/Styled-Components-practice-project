@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+// ovako se radi import kad zelim da koristim css modules
+// takodje bitno je da preimenujem css fajl u button.module.css
+import styles from "./Button.module.css";
 
-import './Button.css';
-
-const Button = props => {
+const Button = (props) => {
   return (
-    <button type={props.type} className="button" onClick={props.onClick}>
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
       {props.children}
     </button>
   );
